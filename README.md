@@ -12,7 +12,6 @@ PG-DUN combines a calibrated double-helix point spread function (DH-PSF) imaging
 
 ## Installation
 
-Use Linux with an NVIDIA GPU and a compatible driver. The following reference setup uses Python 3.13.2 and package versions from the working `SPI` environment; it is not a full training-environment export.
 
 Install [Git LFS](https://git-lfs.com/) before downloading the pretrained model:
 
@@ -27,7 +26,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirement.txt
 ```
 
-The dependency file selects the CUDA 12.6 PyTorch build. CUDA is required by the current PSF loader.
+The dependency file selects the CUDA 12.6 PyTorch build. 
 
 ## Repository Structure
 
@@ -44,8 +43,6 @@ PGDUN_snapshot_3D_imaging/
   utils.py                    # Data loaders, metrics, and utilities
   requirement.txt             # Reference dependencies
 ```
-
-The local `dataaset/` and generated `test_results/` directories are not included.
 
 ## Data and Calibration
 
@@ -66,7 +63,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py \
   --device cuda
 ```
 
-The script reports projected-image PSNR/SSIM and slice-wise reconstruction error. Logs are saved in `test_results/log/`; projected-image and depth-slice comparisons are saved in `test_results/<decoder_type>/0115/`.
+The script reports projected-image PSNR/SSIM and slice-wise reconstruction error.
 
 ## Training
 
@@ -77,7 +74,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
   --device cuda
 ```
 
-Training outputs are written to `weights/`, `log/`, and `results/`. The supplied `train.sh` is a machine-specific distributed-training example; update its project path, Conda environment, and GPU selection before use.
+Training outputs are written to `weights/`, `log/`, and `results/`.
 
 ## Citation
 
