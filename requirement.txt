@@ -1,0 +1,11 @@
+# Reference packages from the Linux SPI environment (Python 3.13.2).
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.6.0+cu126
+numpy==2.1.3
+scipy==1.15.1
+scikit-image==0.25.0
+scikit-learn==1.6.1
+opencv-python-headless==4.11.0.86
+einops==0.8.1
+albumentations==2.0.5
+thop==0.1.1.post2209072238

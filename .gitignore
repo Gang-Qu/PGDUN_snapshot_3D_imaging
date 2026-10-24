@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.pyc.*
+.venv/
+.vscode/
+/dataaset/
+/dataset/
+/test_results/
+/results/
+/log/
+/masks/
+/weights/
+/weight/*/
